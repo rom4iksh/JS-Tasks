@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Форма</title>
+</head>
+<body>
+
+<h2>HTML Форма</h2>
+
+<form action="romashmak0v@icloud.com" method="post">
+    <label for="fname">Имя:</label><br>
+    <input type="text" id="fname" name="fname"><br>
+
+    <label for="lname">Фамилия:</label><br>
+    <input type="text" id="lname" name="lname"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" name="email"><br>
+
+    <label for="subject">Тема:</label><br>
+    <textarea id="subject" name="subject" style="height:200px"></textarea><br>
+
+    <input type="submit" value="Отправить">
+</form>
+
+</body>
+</html>
