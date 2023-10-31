@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body> 
     <!-- Задание 1 -->
     <!-- Описать в html тег input и тег ul. По нажатию на клавишу в инпуте в список ul должен добавляться элемент li. Содержимое li - нажатая клавиша. -->
     <label for="input">Type a key:</label>
@@ -46,25 +38,17 @@
 Создать в html форму с инпутом и кнопкой. Также добавить в html тег ul. Когда форма отправляется, добавлять в список тег li. Его содержимое - введенный текст (input.value). После отправки формы инпут должен быть очищен (проставить пустую строку в value). -->
 
 
-<form onsubmit="addItem(event)">
-    <label for="input">Type something:</label>
-    <input type="text" id="input">
-    <button type="submit">Add Item</button>
-   </form>
-   
-   <ul id="list"></ul>
-   
-   <script>
-    function addItem(event) {
-     event.preventDefault();
-     const input = document.getElementById("input");
-     const list = document.getElementById("list");
-     const li = document.createElement("li");
-     li.innerText = input.value;
-     list.appendChild(li);
-     input.value = "";
-    }
-   </script>
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const li = document.createElement('li');
+    li.innerText = input.value;
+    ul.append(li);
+    input.value = '';
+});
+
 
 
 
@@ -172,53 +156,34 @@
 
 
 
-
-
-
-
-
 <!-- Задание 5
 
 Вставить в разметку html тег button без js (просто предусмотреть в разметке). При наведении на кнопку изменять ее цвет каждый раз рандомным цветом. При выведении мышки за пределы кнопки поворачивать кнопку на рандомный угол от -180 до 180 градусов. Использовать обработку событий mouseenter, mouseleave на этой кнопке. -->
 
-
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        button {
-          margin-top: 50px;
-        padding: 10px 20px;
-   background-color: #4CAF50;
-   color: white;
-   border: none;
-   border-radius: 5px;
-   font-size: 16px;
-   cursor: pointer;
-   transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
-        }
-    </style>
-</head>
-<body>
-
-<button id="myButton">Button</button>
-
-<script>
-    function getRandomNumber(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+const button = document.querySelector('button');
+<style>
+    button {
+      margin-top: 50px;
+    padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
     }
+</style>
 
-    document.getElementById("myButton").addEventListener("mouseenter", function() {
-        this.style.backgroundColor = 'rgb(' + getRandomNumber(0, 255) + ',' + getRandomNumber(0, 255) + ',' + getRandomNumber(0, 255) + ')';
-    });
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
 
-    document.getElementById("myButton").addEventListener("mouseleave", function() {
-        this.style.transform = 'rotate(' + getRandomNumber(-180, 180) + 'deg)';
-    });
-</script>
+button.addEventListener('mouseenter', () => {
+    button.style.backgroundColor = `rgb(${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)}, ${getRandomInteger(0, 255)})`;
+});
 
-</body>
-</html>
 
-</body>
-</html>
+button.addEventListener('mouseleave', () => {
+    button.style.transform = `rotate(${getRandomInteger(-180, 180)}deg)`;
+});
