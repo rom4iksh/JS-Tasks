@@ -83,69 +83,93 @@
 
 
 <!-- 1 variant -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор</title>
+</head>
+<body>
 
-<form onsubmit="calculate(event)">
-    <label for="num1">Enter first number:</label>
-    <input type="number" id="num1" required><br><br>
-    
-    <label for="operator">Select an operator:</label>
-    <select id="operator" required>
-     <option value="">--Select--</option>
-     <option value="+">+</option>
-     <option value="-">-</option>
-     <option value="*">*</option>
-     <option value="/">/</option>
-    </select><br><br>
-    
-    <label for="num2">Enter second number:</label>
-    <input type="number" id="num2" required><br><br>
-    
-    <button type="submit">Calculate</button>
-   </form>
-   
-   <div id="result"></div>
-   
-   <script>
-    function calculate(event) {
-     event.preventDefault();
-     const num1 = document.getElementById("num1").value;
-     const operator = document.getElementById("operator").value;
-     const num2 = document.getElementById("num2").value;
-     let result;
-     if (operator === "+") {
-      result = parseFloat(num1) + parseFloat(num2);
-     } else if (operator === "-") {
-      result = parseFloat(num1) - parseFloat(num2);
-     } else if (operator === "*") {
-      result = parseFloat(num1) * parseFloat(num2);
-     } else if (operator === "/") {
-      result = parseFloat(num1) / parseFloat(num2);
-     }
-     document.getElementById("result").innerText = "Result: " + result;
-    }
-   </script>
+<form id="calcForm">
+    <input type="number" id="num1" required>
+    <select id="oper" required>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" required>
+    <button type="submit">Выполнить</button>
+</form>
+
+<div id="result"></div>
+
+<script>
+    document.getElementById('calcForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var num1 = parseFloat(document.getElementById('num1').value);
+        var num2 = parseFloat(document.getElementById('num2').value);
+        var oper = document.getElementById('oper').value;
+        var result = 0;
+
+        if (oper === '+') {
+            result = num1 + num2;
+        } else if (oper === '-') {
+            result = num1 - num2;
+        } else if (oper === '*') {
+            result = num1 * num2;
+        } else if (oper === '/') {
+            result = num1 / num2;
+        }
+
+        document.getElementById('result').textContent = result;
+    });
+</script>
+
+</body>
+</html>
 
 
 <!-- 2 variant -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор</title>
+</head>
+<body>
 
+<form id="calcForm">
+    <input type="number" id="num1" required>
+    <select id="oper" required>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="num2" required>
+    <button type="submit">Выполнить</button>
+</form>
 
-<form onsubmit="calculate(event)">
-    <label for="expression">Enter an expression:</label>
-    <input type="text" id="expression" required><br><br>
-    
-    <button type="submit">Calculate</button>
-   </form>
-   
-   <div id="result"></div>
-   
-   <script>
-    function calculate(event) {
-     event.preventDefault();
-     const expression = document.getElementById("expression").value;
-     const result = eval(expression);
-     document.getElementById("result").innerText = "Result: " + result;
-    }
-   </script>
+<div id="result"></div>
+
+<script>
+    document.getElementById('calcForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var num1 = parseFloat(document.getElementById('num1').value);
+        var num2 = parseFloat(document.getElementById('num2').value);
+        var oper = document.getElementById('oper').value;
+
+        var result = eval(num1 + oper + num2);
+
+        document.getElementById('result').textContent = result;
+    });
+</script>
+
+</body>
+</html>
+
 
 
 
@@ -158,16 +182,12 @@
 Вставить в разметку html тег button без js (просто предусмотреть в разметке). При наведении на кнопку изменять ее цвет каждый раз рандомным цветом. При выведении мышки за пределы кнопки поворачивать кнопку на рандомный угол от -180 до 180 градусов. Использовать обработку событий mouseenter, mouseleave на этой кнопке. -->
 
 
-
-
-
-
-
+<!DOCTYPE html>
 <html>
 <head>
-  <style>
-    .random-button {
-        margin-top: 50px;
+    <style>
+        button {
+          margin-top: 50px;
         padding: 10px 20px;
    background-color: #4CAF50;
    color: white;
@@ -176,46 +196,29 @@
    font-size: 16px;
    cursor: pointer;
    transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
-    }
-  </style>
+        }
+    </style>
 </head>
 <body>
-  <button class="random-button" onmouseenter="changeColor()" onmouseleave="rotateButton()">Button</button>
 
-  <script>
-    function changeColor() {
-       button = document.querySelector('.random-button');
-       randomColor = getRandomColor();
-      button.style.backgroundColor = randomColor;
+<button id="myButton">Button</button>
+
+<script>
+    function getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    function rotateButton() {
-       button = document.querySelector('.random-button');
-       randomAngle = getRandomAngle();
-      button.style.transform = 'rotate(' + randomAngle + 'deg)';
-    }
+    document.getElementById("myButton").addEventListener("mouseenter", function() {
+        this.style.backgroundColor = 'rgb(' + getRandomNumber(0, 255) + ',' + getRandomNumber(0, 255) + ',' + getRandomNumber(0, 255) + ')';
+    });
 
-    function getRandomColor() {
-       letters = '0123456789ABCDEF';
-       color = '#';
-      for ( i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-      }
-      return color;
-    }
+    document.getElementById("myButton").addEventListener("mouseleave", function() {
+        this.style.transform = 'rotate(' + getRandomNumber(-180, 180) + 'deg)';
+    });
+</script>
 
-    function getRandomAngle() {
-      return Math.floor(Math.random() * 361) - 180;
-    }
-  </script>
 </body>
 </html>
-
-
-
-
-
-
 
 </body>
 </html>
