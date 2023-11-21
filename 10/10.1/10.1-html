@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="10.1-css">
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>Heading</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, odio? Velit eaque enim nisi. Reiciendis adipisci harum quos saepe, reprehenderit nam sunt doloribus minima possimus corrupti eveniet, impedit iusto magni.</p>
+            <button class="popup-btn" id="call-back">Заказать звонок</button>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum blanditiis optio provident! Dolorum eius rem a veritatis architecto. Debitis voluptatem cumque sunt totam quam? Vel quos odio sint earum quae architecto cumque excepturi assumenda repellendus. Labore autem eius molestias illum. Nulla recusandae consequatur unde tenetur, ut quod est fuga numquam eveniet aperiam, repellendus error nisi repellat magnam provident esse. Quis, laborum tempora omnis, aut eaque tenetur eum similique iusto quasi quia labore voluptatem tempore alias reprehenderit exercitationem enim vitae! Minus ratione recusandae ab ex, soluta magnam, quae maxime quod distinctio labore voluptatibus officia eius dolorum sunt. Provident, expedita maxime maiores incidunt nemo possimus adipisci tempore magni sit laudantium, odit culpa suscipit. Dolor asperiores totam est ducimus rem id nisi, quaerat eaque soluta suscipit veritatis, a provident aperiam consequuntur, odio quam reprehenderit modi. Libero architecto rerum, sequi ullam tenetur quasi aut enim maiores voluptates consectetur unde placeat, nobis et tempore optio?</p>
+        </div>
+    </section>
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <button class="popup__close">X</button>
+            <h2>Заголовок окна</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, nihil qui? Voluptate ipsa dolor alias aspernatur vitae quia incidunt debitis facilis accusamus, atque accusantium, ducimus tenetur, consequuntur sapiente aut libero.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, dolorem? Amet reiciendis et aliquam iste debitis voluptates suscipit, ducimus laudantium sit ipsam molestias itaque nisi similique mollitia libero, dolore voluptatibus.</p>
+        </div>
+    </div>
+</body>
 
+<script src="10.1-js"></script>
+</html>
