@@ -1,1 +1,19 @@
+// Задание 1
+// Реализовать функционал модального окошка, которое открывается с затемнением фона при нажатии на кнопку и закрывается по нажатию на кнопку-крестик или на тёмную область вокруг окошка.
+
+let btn = document.querySelector('#call-back');
+let popup = document.querySelector('.popup');
+let popupContent = document.querySelector('.popup__content');
+let popupClose = document.querySelector('.popup__close');
+btn.addEventListener('click', () => {
+    popup.classList.add("opened");
+});
+popupClose.addEventListener('click', () => {
+    popup.classList.remove("opened");
+});
+window.addEventListener('click', (event) => {
+    if (event.target == popup) {
+    popup.classList.remove("opened");
+    }
+});
 
