@@ -1,1 +1,32 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="10.2-css">
+</head>
+<body> 
+<div class="side-panel">
+    <div class="container">
+    <nav>
+        <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Клиенты</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    </div>
+    <button class="btn-close">X</button>
+</div>
+<main class="main">
+<div class="container">
+    <h1>Заголовок страницы</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ex nostrum quisquam, magnam ipsum totam placeat fugit maiores iusto recusandae officiis porro non aliquid blanditiis! Similique, velit? Natus, itaque ratione.</p>
+    <button class="main__btn">Открыть</button>  
+</div>
+</main>
+<script src="10.2-js"></script>
+</body>
+</html>
