@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="10.3-css">
+    <script src="https://kit.fontawesome.com/98db508811.js"></script>
+</head>
+<body>
+    
 
+<nav>
+    <div class="container">
+        <div class="buttons">
+        <button class="btn"><i class="fa fa-solid fa-bars"></i></button>
+        </div>
+        <div class="navbar">
+            <form>
+                <input type="text" class="search">
+            </form>
+            <div class="list">
+                <ul>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">События</a></li>
+                    <li><a href="#">Зарплаты</a></li>
+                    <li><a href="#">Компании</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#">ИТ-курсы</a></li>
+                    <li><a href="#">ИТ-обучение</a></li>
+                    <li><a href="#">News in English</a></li>
+                    <li><a href="#">FIN(TECH)</a></li>
+                </ul>
+            </div>
+        </div>
+        <h1>Заголовок страницы</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis veritatis ullam, illum eius expedita suscipit, labore illo et explicabo nihil sint quod fugit est, soluta praesentium minima accusamus facere corrupti?</p>
+    </div>
+</nav>
+
+<script src="10.3-js"></script>
+
+</body>
+</html>
