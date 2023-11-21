@@ -20,18 +20,19 @@
                 <input type="text" class="search">
             </form>
             <div class="list">
-                <ul>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Вакансии</a></li>
-                    <li><a href="#">События</a></li>
-                    <li><a href="#">Зарплаты</a></li>
+                <ul>  
                     <li><a href="#">Компании</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Зарплаты</a></li>
+                    <li><a href="#">События</a></li>
+                    <li><a href="#">Вакансии</a></li>
+
                 </ul>
 
                 <ul>
-                    <li><a href="#">ИТ-курсы</a></li>
-                    <li><a href="#">ИТ-обучение</a></li>
                     <li><a href="#">News in English</a></li>
+                    <li><a href="#">ИТ-обучение</a></li>
+                    <li><a href="#">ИТ-курсы</a></li>
                     <li><a href="#">FIN(TECH)</a></li>
                 </ul>
             </div>
