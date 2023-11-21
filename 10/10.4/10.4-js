@@ -1,1 +1,29 @@
-
+const input = document.querySelector('.input');
+const ul = document.querySelector('.ul');
+const form = document.querySelector('form');
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const li = document.createElement('li');
+    li.innerText = input.value;
+    input.value = '';
+    const input2 = document.createElement('input');
+    input2.type = 'checkbox';
+    const input3 = document.createElement('input');
+    input3.type = 'reset';
+    input3.value = 'X';
+    input3.addEventListener('click', () => {
+        ul.removeChild(li);
+    });
+    input2.addEventListener('click', () => {
+        if (input2.checked === true) {
+            li.style.textDecoration = 'line-through';
+            ul.append(li);
+        } else {
+            li.style.textDecoration = 'none';
+            ul.prepend(li);
+        }
+    });
+    li.prepend(input2);
+    ul.append(li);
+    li.append(input3);
+});
