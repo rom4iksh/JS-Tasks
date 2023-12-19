@@ -31,18 +31,3 @@ let newUser = JSON.parse(localStorage.user);
 
 
 
-// Задание 2
-// 1) Добавить в таск-мееджер кнопку, которая помечает все задачи как сделанные.
-// - Добавить тег button в html код и повесить на него обработчик события click
-// - В обработчике найти все существующие теги li при помощи функции document.querySelectorAll
-// - В цикле или с помощью forEach обойти найденные в пункте теги li. Каждому проставить li.style.textDecoration = 'line-through';
-
-
-
-
-
-document.querySelector('.all-done').addEventListener('click', () => {
-    document.querySelectorAll('li').forEach(el => {
-        el.style.textDecoration = 'line-through';
-    })
-});
