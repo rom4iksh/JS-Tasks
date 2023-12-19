@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+body {
+    // background-image: url(thum.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.562);
+    padding: 20px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    width: 1000px;
+    height: 250px;
+    .images {
+        img {
+            margin-right: 20px;
+            width: 300px;
+            height: 190px;
+            transition: 1s;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover,
+            &.active {
+                width: 320px;
+                height: 210px;
+            }
+        }
+    }
+}
