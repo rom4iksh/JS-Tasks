@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+    border: #6B97CA 1px solid;
+}
+
+.currentInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 200px;
+    background-color: #6B97CA;
+    color: white;
+    padding: 10px 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: larger;
+}
+
+.statusImg {
+    width: 50px;
+}
+
+.currentDateCitySpeed {
+
+    justify-content: space-between;
+}
+
+.currentSpeed {
+    justify-content: end;
+}
+
+#city, #time, #temp, #speed  {
+    display: block;
+    margin-bottom: 5px;
+}
+
+p.speed, .currentDateCity {
+    margin-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.forecastData {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    border-bottom: #6B97CA 1px solid;
+}
+
+.forecastData:last-child {
+    border-bottom: none;
+}
+
+.forecastDataCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dayDate, .dayDateTime {
+    margin: 3px 20px;
+}
+
+.dayTemp {
+    margin-right: 20px;
+}
